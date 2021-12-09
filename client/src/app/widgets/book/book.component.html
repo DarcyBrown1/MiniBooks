@@ -1,0 +1,10 @@
+<section *ngIf="book">
+  <img [src]="book.coverUrl" [alt]="book.title" class="imgcontainer">
+  <div class="container">
+    <h4><b>{{ book.title }}</b></h4>
+    <p>Written by {{ book.author }}</p>
+    <p>Genres: {{ book.genres }}</p>
+    <div [innerHTML]="book.notes"></div>
+  </div>
+  <app-book-reviews [book]="book"></app-book-reviews>
+</section>

@@ -1,0 +1,7 @@
+<div *ngIf="book" class="card" [routerLink]="['/book', book.id]">
+  <img [src]="book.coverUrl" [alt]="book.title">
+  <div class="container">
+    <h4><b>{{ book.title }}</b></h4>
+    <p>{{ book.author }}</p>
+  </div>
+</div>

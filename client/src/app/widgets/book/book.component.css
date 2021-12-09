@@ -1,0 +1,18 @@
+.container {
+  padding: 2px 16px;
+  width: 75%;
+  float: left;
+}
+
+.imgcontainer {
+  padding: 2px 16px;
+  width: 25%;
+  float: left;
+}
+
+.iconContainer {
+  font-size: 1em;
+  text-align:center;
+  float: right;
+  margin-top: 1em;;
+}

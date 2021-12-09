@@ -1,0 +1,17 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-title">User Name</h4>
+  <button type="button" class="close" aria-describedby="modal-title" (click)="modal.dismiss('close')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body">
+  <div class="form-group">
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="user.username" class="form-control" maxlength="50">
+  </div>
+</div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-primary" (click)="save()">Sign in</button>
+</div>

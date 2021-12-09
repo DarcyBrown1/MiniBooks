@@ -1,0 +1,12 @@
+.center {
+  margin: auto;
+  width: 75%;
+  padding: 10px;
+}
+
+.iconContainer {
+  font-size: .75em;
+  text-align:center;
+  float: right;
+  margin-top: 1em;;
+}

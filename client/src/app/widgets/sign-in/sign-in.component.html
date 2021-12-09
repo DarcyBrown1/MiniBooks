@@ -1,0 +1,11 @@
+<div *ngIf="user.username.length==0" (click)=enterName() class="container">
+  <div><b>Anonymous</b></div>
+  <fa-icon [icon]="faMask" size="3x"></fa-icon>
+  <div>Sign In</div>
+</div>
+
+<div *ngIf="user.username.length>0" (click)=signOut() class="container">
+  <div><b>{{ user.username }}</b></div>
+  <fa-icon [icon]="faUser" size="3x"></fa-icon>
+  <div>Sign Out</div>
+</div>

@@ -1,0 +1,11 @@
+<header class="navbar navbar-light bg-light" aria-label="top header">
+  <h1 [routerLink]="['/books']">{{ title }}</h1>
+  <div class="btn btn-outline-primary float-right" [routerLink]="['/reviews']">Reviews</div>
+  <div class="btn btn-outline-primary float-right" [routerLink]="['/books']">Books</div>
+  <div class="float-right">
+    <app-sign-in></app-sign-in>
+  </div>
+</header>
+<section class="main" role="main" id="maincontent">
+  <router-outlet></router-outlet>
+  <section>

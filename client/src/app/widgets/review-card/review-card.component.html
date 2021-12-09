@@ -1,0 +1,5 @@
+<div *ngIf="review" class="container" [routerLink]="['/review', review.id]">
+  <ngb-rating [(rate)]="review.rating" [max]=5 [readonly]="true"></ngb-rating>
+  <div>Reviewed by: {{ review.username }} {{ review.created | date }}</div>
+  <div class="comments">{{ review.comments }}</div>
+</div>

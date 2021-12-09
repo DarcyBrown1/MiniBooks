@@ -1,0 +1,9 @@
+<div class="center">
+  <h2>Book List</h2>
+  <div *ngIf="books">
+    <ng-container *ngFor="let book of books">
+      <app-book-card [book]=book></app-book-card>
+      <br/>
+    </ng-container>
+  </div>
+</div>

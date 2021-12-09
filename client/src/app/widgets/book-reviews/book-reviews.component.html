@@ -1,0 +1,17 @@
+<section class="center">
+  <div style="float:left">
+    <h2>Reviews</h2>
+  </div>
+
+  <div (click)=reviewAdd() class="iconContainer">
+    <fa-icon [icon]="faPen" size="2x"></fa-icon>
+    <div>Add Review</div>
+  </div>
+
+  <div *ngIf="reviews">
+    <ng-container *ngFor="let review of reviews">
+      <app-review-card [review]=review></app-review-card>
+      <br/>
+    </ng-container>
+  </div>
+</section>

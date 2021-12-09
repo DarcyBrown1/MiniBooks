@@ -1,0 +1,25 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-title">Book Review</h4>
+  <button type="button" class="close" aria-describedby="modal-title" (click)="modal.dismiss('close')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body">
+  <div class="form-group">
+    <label>Book Title:</label>
+    {{ review.bookTitle }}
+  </div>
+  <div class="form-group">
+    <label>Rating:</label>
+    <ngb-rating [(rate)]="review.rating" [max]=5></ngb-rating>
+  </div>
+  <div class="form-group">
+    <label>Comments:</label>
+    <input type="text" [(ngModel)]="review.comments" class="form-control">
+  </div>
+</div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-primary" (click)="save()">Save</button>
+</div>

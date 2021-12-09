@@ -1,0 +1,23 @@
+<section *ngIf="review" class="container">
+    <img [src]="book.coverUrl" [alt]="book.title" class="imgContainer" *ngIf="book && book.title && book.coverUrl">
+    <div class="innerContainer">
+        <div *ngIf="book && book.title">
+            <h4><b>{{ book.title }}</b></h4>
+            <p>Written by {{ book.author }}</p>
+        </div>
+        <div>Reviewed by: {{ review.username }} <ngb-rating [(rate)]="review.rating" [max]=5 [readonly]="true"></ngb-rating> {{ review.created | date }}</div>
+        <div>{{ review.comments }}</div>
+        <div *ngIf="review.altered">Last updated on: {{ review.altered | date }}</div>
+        
+        
+        <div *ngIf="user.username === review.username" (click)=reviewDelete() class="iconContainer">
+            <fa-icon [icon]="faTrash" size="2x"> </fa-icon>
+            <div>Delete</div>
+        </div>
+
+        <div *ngIf="user.username === review.username" (click)=reviewEdit() class="iconContainer">
+            <fa-icon [icon]="faPen" size="2x"> </fa-icon>
+            <div>Edit</div>
+        </div>
+    </div>
+</section>

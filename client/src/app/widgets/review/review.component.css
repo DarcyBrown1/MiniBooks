@@ -1,0 +1,22 @@
+.container {
+    padding: 2px 16px;
+    width: 100%;
+    float: left;
+  }
+  .innerContainer {
+    padding: 2px 16px;
+    width: 75%;
+    float: left;
+  }
+  .imgContainer {
+    padding: 2px 16px;
+    width: 25%;
+    float: left;
+  }
+
+  .iconContainer {
+    float: right;
+    width: 75px;
+    font-size: 0.75rem;
+    margin-top: 20px;
+  }

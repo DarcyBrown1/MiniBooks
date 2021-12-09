@@ -1,0 +1,9 @@
+<section class="center">
+  <h2>Book Reviews by Others</h2>
+  <div *ngIf="reviews">
+    <ng-container *ngFor="let review of reviews">
+      <app-review [review]=review></app-review>
+      <br/>
+    </ng-container>
+  </div>
+</section>
