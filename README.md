@@ -43,9 +43,7 @@ Getting started
         pip install -r requirements.txt
 
         #run the flask app
-        set FLASK_APP=flask_app
-        set FLASK_ENV=development
-        flask run
+        FLASK_APP=flask_app FLASK_ENV=development flask run
 
         #When you are done with the virtual environment deactivate it
         deactivate
