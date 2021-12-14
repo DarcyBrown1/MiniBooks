@@ -44,8 +44,8 @@ def load_books():
         header = next(csv_reader)
         if header != None:
             for row in csv_reader:
-                book_data = zip(book_attributes, row)
-                book = {data_pair[0]: unidecode(data_pair[1]) for data_pair in book_data}
+                a_book_data = zip(book_attributes, row)
+                book = {data_pair[0]: unidecode(data_pair[1]) for data_pair in a_book_data}
                 book["id"] = int(book["url"].rsplit("/id", 1)[1])
                 books.append(book)
     return books
