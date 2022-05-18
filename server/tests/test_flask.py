@@ -1,17 +1,7 @@
-import os
 import json
-os.environ['FLASK_SESSION_KEY'] = 'abc123'
-os.environ['DSN_TOOLSDB'] = 'host=localhost user=toolop dbname=ripit_2 sslmode=require'
-
-# monkey patch flask_caching to work without redis during testing
-from flask_caching import Cache  # noqa: E402
 import flask_app.app  # noqa: E402
-flask_app.app.cache = Cache(config={
-    "CACHE_TYPE": "simple",
-})
 
 app = flask_app.app.load()
-test_auth_header = {'X-Forwarded-User': 'test-user'}
 
 
 def test_health_check():
